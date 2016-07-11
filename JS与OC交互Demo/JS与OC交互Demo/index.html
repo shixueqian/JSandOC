@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="utf-8">
+    <title>Google 翻译</title>
+    
+    <!--  定义js函数  -->
+    <script type="text/javascript">
+        function test1()
+        {
+            alert("我是被OC调用的js方法")
+        }
+    </script>
+    
+    <!--  定义js函数  -->
+    <script type="text/javascript">
+        function test3(a,b)
+        {
+            alert("我是被OC调用的js方法" + a + b)
+        }
+    </script>
+    
+
+</head>
+<body>
+    <br /><br /><br /><br />
+
+    <!-- 创建一个按钮，点击就调用  printHelloWorld()  函数 -->
+    <button onclick="printHelloWorld()">在Xcode控制台打印HelloWold</button>
+    
+    <br/>
+    <!--  创建一个按钮，点击就调用printAandB()方法  -->
+    <button onclick="printAandB('我是A','我是B')">打印参数A和参数B</button>
+
+</body>
+</html>
