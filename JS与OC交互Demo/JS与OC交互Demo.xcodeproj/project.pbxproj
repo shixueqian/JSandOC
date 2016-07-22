@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042CF20A1D349F97003410D2 /* SQInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CF2081D349F97003410D2 /* SQInfoController.m */; };
+		042CF20B1D349F97003410D2 /* SQInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042CF2091D349F97003410D2 /* SQInfoController.xib */; };
 		04D3A6D31D30B45A0003AF9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D3A6D21D30B45A0003AF9B /* main.m */; };
 		04D3A6D61D30B45A0003AF9B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D3A6D51D30B45A0003AF9B /* AppDelegate.m */; };
 		04D3A6D91D30B45A0003AF9B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D3A6D81D30B45A0003AF9B /* ViewController.m */; };
@@ -18,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		042CF2071D349F97003410D2 /* SQInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQInfoController.h; sourceTree = "<group>"; };
+		042CF2081D349F97003410D2 /* SQInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQInfoController.m; sourceTree = "<group>"; };
+		042CF2091D349F97003410D2 /* SQInfoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SQInfoController.xib; sourceTree = "<group>"; };
 		04D3A6CE1D30B45A0003AF9B /* JS与OC交互Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JS与OC交互Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D3A6D21D30B45A0003AF9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04D3A6D41D30B45A0003AF9B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -74,6 +79,9 @@
 				04D3A6DF1D30B45A0003AF9B /* LaunchScreen.storyboard */,
 				04D3A6E21D30B45A0003AF9B /* Info.plist */,
 				04D3A6D11D30B45A0003AF9B /* Supporting Files */,
+				042CF2071D349F97003410D2 /* SQInfoController.h */,
+				042CF2081D349F97003410D2 /* SQInfoController.m */,
+				042CF2091D349F97003410D2 /* SQInfoController.xib */,
 			);
 			path = "JS与OC交互Demo";
 			sourceTree = "<group>";
@@ -146,6 +154,7 @@
 			files = (
 				04D3A6E11D30B45A0003AF9B /* LaunchScreen.storyboard in Resources */,
 				04F01AA71D30D10000FD4273 /* index.html in Resources */,
+				042CF20B1D349F97003410D2 /* SQInfoController.xib in Resources */,
 				04D3A6DE1D30B45A0003AF9B /* Assets.xcassets in Resources */,
 				04D3A6DC1D30B45A0003AF9B /* Main.storyboard in Resources */,
 			);
@@ -159,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04D3A6D91D30B45A0003AF9B /* ViewController.m in Sources */,
+				042CF20A1D349F97003410D2 /* SQInfoController.m in Sources */,
 				04D3A6D61D30B45A0003AF9B /* AppDelegate.m in Sources */,
 				04D3A6D31D30B45A0003AF9B /* main.m in Sources */,
 			);

@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <JavaScriptCore/JavaScriptCore.h>
+#import "SQInfoController.h"
 
 @interface ViewController ()<UIWebViewDelegate>
 
@@ -27,11 +28,9 @@
     
     //获取本地html路径
     NSString *path = [[NSBundle mainBundle] pathForResource:@"index.html" ofType:nil];
-    //中文路径要转码
-    path = [path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    
+
     //加载html
-    NSURL *url = [NSURL URLWithString:path];
+    NSURL *url = [NSURL fileURLWithPath:path];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:request];
     
@@ -40,11 +39,12 @@
 -(void)webViewDidFinishLoad:(UIWebView *)webView {
     NSLog(@"网页加载完成");
     
-//    [self demo1];
+    [self demo1];
 //    [self demo2];
 //    [self demo3];
 //    [self demo4];
-    [self demo5];
+//    [self demo5];
+//    [self demo6];
 }
 
 //OC调用无参数的js方法
@@ -97,6 +97,26 @@
     context[@"printAandB"] = ^(NSString *A ,NSString *B) {
         
         NSLog(@"%@,%@",A,B);
+    };
+}
+
+
+- (void)demo6 {
+    
+    //创建JSContext对象
+    JSContext *context = [self.webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
+    
+    //要用weakSelf,避免循环引用
+    __weak __typeof(self)weakSelf = self;
+    
+    //注册presentViewController方法
+    context[@"presentViewController"] = ^() {
+        SQInfoController *controller = [[SQInfoController alloc] initWithNibName:@"SQInfoController" bundle:nil];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            //更新UI操作
+            [weakSelf presentViewController:controller animated:YES completion:nil];
+        });
     };
 }
 
